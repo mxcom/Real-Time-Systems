@@ -1,0 +1,47 @@
+1. WCET: 100% calls to myfunc2()
+
+./main 0
+
+output:
+
+myfunc1 probability: 0
+myfunc2 probability: 100
+full-seconds: 1651080878, nano-seconds 652447100
+full-seconds: 1651080884, nano-seconds 793839399
+difference in seconds: 6.1414s
+
+2. BCET: 100% calls to myfunc1()
+
+./main 100
+
+output:
+
+myfunc1 probability: 100
+myfunc2 probability: 0
+full-seconds: 1651080942, nano-seconds 369550569
+full-seconds: 1651080943, nano-seconds 624297859
+difference in seconds: 1.2547s
+
+3. ACET: 50% chance for calls to myfunc1() and 50% chance for calls to myfunc2()
+
+./main 50
+
+output:
+
+myfunc1 probability: 50
+myfunc2 probability: 50
+full-seconds: 1651081023, nano-seconds 997970565
+full-seconds: 1651081027, nano-seconds 593827188
+difference in seconds: 3.5959s
+
+4. ACET: 20% chance to call myfunc2()
+
+./main 80
+
+output:
+
+myfunc1 probability: 80
+myfunc2 probability: 20
+full-seconds: 1651081101, nano-seconds 493861826
+full-seconds: 1651081103, nano-seconds 686045332
+difference in seconds: 2.1922s
