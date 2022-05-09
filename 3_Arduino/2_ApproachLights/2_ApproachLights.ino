@@ -1,5 +1,4 @@
 void setup() {
-  pinMode(1, INPUT);
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
@@ -15,8 +14,6 @@ void loop() {
     digitalWrite(5,LOW);
     delay(2);            //msec
     digitalWrite(5, HIGH);
-    //hier braucht es long ... 60.5 wird absgeschnitten -> evtl delayMicrosec
-    //https://www.arduino.cc/reference/en/language/functions/time/delaymicroseconds/
     delay(60);   
     digitalWrite(6, LOW);
     delay(2);
