@@ -17,7 +17,7 @@ void setup() {
   pinMode(button2, INPUT);
   pinMode(led, OUTPUT);
   Serial.begin(9600);
-  Serial.println("Hello this is a reaction Test of your name");
+  Serial.println("Hello this is a reaction Test of Max");
 }
 
 void loop() {
@@ -29,7 +29,7 @@ void loop() {
   Serial.println(" ms");
 
   while(digitalRead(button2) == LOW) { /* wait */ }
-
+  
   time2 = micros();
   Serial.print("time 2: ");
   Serial.print(time2);
@@ -46,5 +46,7 @@ void loop() {
   Serial.print("time difference: ");
   Serial.print(diffSec, 6);
   Serial.println(" s");
+
+  while(digitalRead(button2) == HIGH & digitalRead(button1) == HIGH) { /* wait */ }
   
 }
