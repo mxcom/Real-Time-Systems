@@ -7,7 +7,7 @@ void switchState(){
 
 void setup() {
   
-  pinMode(2,INPUT_PULLUP); 
+  pinMode(2,INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(2), switchState, FALLING);
   pinMode(5,OUTPUT);
   pinMode(6,OUTPUT);
